@@ -1,0 +1,29 @@
+﻿sahilkhandelwal@Sahils-Air ~ % cd Desktop
+sahilkhandelwal@Sahils-Air Desktop % ls        
+6.1.png
+6.2.png
+Screenshot 2022-02-01 at 7.26.51 PM.png
+Screenshot 2022-02-02 at 11.18.04 AM.png
+Screenshot 2022-02-02 at 11.18.24 AM.png
+practice
+schedule.png
+untitled folder
+sahilkhandelwal@Sahils-Air Desktop % cd practice
+sahilkhandelwal@Sahils-Air practice % cd ..
+sahilkhandelwal@Sahils-Air Desktop % touch abc.txt
+sahilkhandelwal@Sahils-Air Desktop % mkdir hello
+sahilkhandelwal@Sahils-Air Desktop % rmdir hello
+sahilkhandelwal@Sahils-Air Desktop % cal
+   February 2022      
+Su Mo Tu We Th Fr Sa  
+       1  2  3  4  5  
+ 6  7  8  9 10 11 12  
+13 14 15 16 17 18 19  
+20 21 22 23 24 25 26  
+27 28                 
+                      
+sahilkhandelwal@Sahils-Air Desktop % date
+Thu Feb  3 17:32:29 IST 2022
+sahilkhandelwal@Sahils-Air Desktop % pwd
+/Users/sahilkhandelwal/Desktop
+sahilkhandelwal@Sahils-Air Desktop % rm abc.txt

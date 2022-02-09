@@ -1,0 +1,84 @@
+
+*** Algorithm for finding area of triangle *** 
+
+step1 :  start
+step2 :  input b and h // base and height of the triangle
+step3 :  area = 1/2 * b * h
+step4 :  print area of the triangle 
+step5 :  end 
+
+
+*** Pseudocode for basic arithmetic operations ***
+
+step1 : input a and b
+step2 : sum = a+b
+step3 : sub = a-b
+step4 : mul = a*b
+step5 : div = a/b
+
+
+*** Algorithm to calculate simple interest using formula ***
+
+step1 : Start
+step2 : input p, r and t
+step3 : SI = p*(1+(r*t))
+step4 : print SI
+step5 : end
+
+
+*** Algorithm to find largest of 3 number ***
+
+step1 : start 
+step2 : input a, b and c
+step3 : if a is greater than b and a is greater than c
+		print a is largest
+	else if  b is greater than a and b is greater than c 
+		print b is largest
+	else 
+		print c is largest
+step4 : end
+
+
+*** algorithm to check whether given integer is prime or not ***
+
+step1 : start 
+step2 : input a number a
+step3 : run for loop from i = 2 to square root of a.
+step4 : If a is divisible by i , then set = 0.
+step5 : If temp =  1
+		print a is prime
+	else
+		print a is not prime
+step6 : end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
