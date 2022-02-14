@@ -1,0 +1,11 @@
+Linked list is a linear data structure in java, but elements are not stored in contiguous memory locations and every object is separate object with a data part and address part.
+
+1. singly linked list - we can traverse this list in one direction only, i.e. forward direction. there is a head node which if lost then whole list is lost.
+
+2. doubly linked list - we can traverse this list in both directions forward as well as reverse direction, node of this list contains address of previous as well as next node.
+
+3. circular linked list - circular linked list is same as singly linked list with one difference that we can directly go to the first node from the last node, as the address in last node is not NULL but it it is the address of the first node or head node.
+
+4. stack - stack is a data structure which follows the LIFO mechanism (Last in first out), stack is also a class in java.
+
+5. queue - quque is a data structure which follows the FIFO mechanism (First in first out). queue is also a class in java.
