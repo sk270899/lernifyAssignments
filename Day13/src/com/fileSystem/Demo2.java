@@ -9,6 +9,10 @@ public class Demo2 {
 		// TODO Auto-generated method stub
 		File f = new File("hello.txt");
 		f.createNewFile();
+		
+		File f1 = new File("folder");
+		f1.mkdir();
+		
 	}
 
 }
