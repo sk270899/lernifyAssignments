@@ -9,8 +9,7 @@ public class SingleTryMultiCatch {
 			String s= "000";
 			System.out.println(s.length());
 			int x= Integer.parseInt(s);
-			System.out.println("no error  "+a[4]+"  "+x);
-			
+			System.out.println("There is no Error in the Execution");
 			}
 			catch(ArrayIndexOutOfBoundsException ae) {
 				System.out.println("Error : Array Index out of bounds");
