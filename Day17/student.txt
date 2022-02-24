@@ -1,0 +1,167 @@
+student=# CREATE TABLE person (
+student(# id BIGSERIAL NOT NULL PRIMARY KEY,
+student(# first_name VARCHAR(50) NOT NULL,
+student(# last_name VARCHAR(50) NOT NULL,
+student(# gender VARCHAR(7) NOT NULL,
+student(# date_of_birth DATE NOT NULL,
+student(# email VARCHAR(150) );
+CREATE TABLE
+student=# \d person
+                                       Table "public.person"
+    Column     |          Type          | Collation | Nullable |              Default
+---------------+------------------------+-----------+----------+------------------------------------
+ id            | bigint                 |           | not null | nextval('person_id_seq'::regclass)
+ first_name    | character varying(50)  |           | not null |
+ last_name     | character varying(50)  |           | not null |
+ gender        | character varying(7)   |           | not null |
+ date_of_birth | date                   |           | not null |
+ email         | character varying(150) |           |          |
+Indexes:
+    "person_pkey" PRIMARY KEY, btree (id)
+
+
+student=# \d
+              List of relations
+ Schema |     Name      |   Type   |  Owner
+--------+---------------+----------+----------
+ public | person        | table    | postgres
+ public | person_id_seq | sequence | postgres
+(2 rows)
+
+
+student=# \dt
+         List of relations
+ Schema |  Name  | Type  |  Owner
+--------+--------+-------+----------
+ public | person | table | postgres
+(1 row)
+
+
+student=# INSERT INTO person (first_name, last_name, gender, date_of_birth)
+student-# VALUES('sahil', 'khandelwal', 'male', '1999-08-27');
+INSERT 0 1
+student=# INSERT INTO person (first_name, last_name, gender, date_of_birth, email)
+student-# VALUES('shruti', 'khandelwal', 'female', '2002-07-21', 'shruti@gmail.com');
+INSERT 0 1
+student=# \d person
+                                       Table "public.person"
+    Column     |          Type          | Collation | Nullable |              Default
+---------------+------------------------+-----------+----------+------------------------------------
+ id            | bigint                 |           | not null | nextval('person_id_seq'::regclass)
+ first_name    | character varying(50)  |           | not null |
+ last_name     | character varying(50)  |           | not null |
+ gender        | character varying(7)   |           | not null |
+ date_of_birth | date                   |           | not null |
+ email         | character varying(150) |           |          |
+Indexes:
+    "person_pkey" PRIMARY KEY, btree (id)
+
+
+student=# SELECT * FROM person
+student-# SELECT * FROM person;
+ERROR:  syntax error at or near "SELECT"
+LINE 2: SELECT * FROM person;
+        ^
+student=# SELECT * FROM person;
+ id | first_name | last_name  | gender | date_of_birth |      email
+----+------------+------------+--------+---------------+------------------
+  1 | sahil      | khandelwal | male   | 1999-08-27    |
+  2 | shruti     | khandelwal | female | 2002-07-21    | shruti@gmail.com
+(2 rows)
+
+
+student=# SELECT * FEROM person ORDER BY first_name DESC;
+ERROR:  syntax error at or near "FEROM"
+LINE 1: SELECT * FEROM person ORDER BY first_name DESC;
+                 ^
+student=# SELECT * FROM person ORDER BY first_name DESC;
+ id | first_name | last_name  | gender | date_of_birth |      email
+----+------------+------------+--------+---------------+------------------
+  2 | shruti     | khandelwal | female | 2002-07-21    | shruti@gmail.com
+  1 | sahil      | khandelwal | male   | 1999-08-27    |
+(2 rows)
+
+
+student=# SELECT * FROM person WHERE gender = 'male';
+ id | first_name | last_name  | gender | date_of_birth | email
+----+------------+------------+--------+---------------+-------
+  1 | sahil      | khandelwal | male   | 1999-08-27    |
+(1 row)
+
+
+student=# SELECT * FROM person OFFSET 1;
+ id | first_name | last_name  | gender | date_of_birth |      email
+----+------------+------------+--------+---------------+------------------
+  2 | shruti     | khandelwal | female | 2002-07-21    | shruti@gmail.com
+(1 row)
+
+
+student=# DROP TABLE student
+student-# \d
+              List of relations
+ Schema |     Name      |   Type   |  Owner
+--------+---------------+----------+----------
+ public | person        | table    | postgres
+ public | person_id_seq | sequence | postgres
+(2 rows)
+
+
+student-# \d person
+                                       Table "public.person"
+    Column     |          Type          | Collation | Nullable |              Default
+---------------+------------------------+-----------+----------+------------------------------------
+ id            | bigint                 |           | not null | nextval('person_id_seq'::regclass)
+ first_name    | character varying(50)  |           | not null |
+ last_name     | character varying(50)  |           | not null |
+ gender        | character varying(7)   |           | not null |
+ date_of_birth | date                   |           | not null |
+ email         | character varying(150) |           |          |
+Indexes:
+    "person_pkey" PRIMARY KEY, btree (id)
+
+
+student-# SELECT * FROM person
+student-# SELECT * FROM person;
+ERROR:  syntax error at or near "SELECT"
+LINE 2: SELECT * FROM person
+        ^
+student=# SELECT * FROM person;
+ id | first_name | last_name  | gender | date_of_birth |      email
+----+------------+------------+--------+---------------+------------------
+  1 | sahil      | khandelwal | male   | 1999-08-27    |
+  2 | shruti     | khandelwal | female | 2002-07-21    | shruti@gmail.com
+(2 rows)
+
+
+student=# ALTER TABLE person ADD COLUMN class int;
+ALTER TABLE
+student=# \d person
+                                       Table "public.person"
+    Column     |          Type          | Collation | Nullable |              Default
+---------------+------------------------+-----------+----------+------------------------------------
+ id            | bigint                 |           | not null | nextval('person_id_seq'::regclass)
+ first_name    | character varying(50)  |           | not null |
+ last_name     | character varying(50)  |           | not null |
+ gender        | character varying(7)   |           | not null |
+ date_of_birth | date                   |           | not null |
+ email         | character varying(150) |           |          |
+ class         | integer                |           |          |
+Indexes:
+    "person_pkey" PRIMARY KEY, btree (id)
+
+
+student=# ALTER TABLE person RENAME COLUMN class TO stud_class;
+ALTER TABLE
+student=# \d person
+                                       Table "public.person"
+    Column     |          Type          | Collation | Nullable |              Default
+---------------+------------------------+-----------+----------+------------------------------------
+ id            | bigint                 |           | not null | nextval('person_id_seq'::regclass)
+ first_name    | character varying(50)  |           | not null |
+ last_name     | character varying(50)  |           | not null |
+ gender        | character varying(7)   |           | not null |
+ date_of_birth | date                   |           | not null |
+ email         | character varying(150) |           |          |
+ stud_class    | integer                |           |          |
+Indexes:
+    "person_pkey" PRIMARY KEY, btree (id)
